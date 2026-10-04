@@ -50,7 +50,7 @@ function AdminDashboard() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/registrations",
+        `${import.meta.env.VITE_API_URL}/api/registrations`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -103,7 +103,7 @@ function AdminDashboard() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/registrations/${id}/status`,
+        `${import.meta.env.VITE_API_URL}/api/registrations/${id}/status`,
         {
           method: "PATCH",
           headers: {
